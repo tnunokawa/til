@@ -9,7 +9,7 @@ tags: [Java Bronze, 試験対策, 黒本]
 
 現在1周
 
-# 🧩 Java Bronze 黒本 1周目 結果
+# 🧩 Java Bronze 黒本 1章1周目 結果
 
 ---
 

@@ -1,9 +1,9 @@
 # サイトの基本情報
-title: "nuno's devlog"
+title: "nuno's TIL"
 description: "個人の技術ノート・学習ログ"
 author: "nuno"
 #email: "yourname@example.com"
-#url: "https://nuno.github.io"   # サイトのURL
+url: "https://tnunokawa.github.io/til/"   # サイトのURL
 #baseurl: ""                     # サブパスがある場合のみ設定（例：/blog）
 
 # テーマ設定
