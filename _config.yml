@@ -31,5 +31,3 @@ plugins:
 
 # Google Analyticsなどを入れたい場合
 # google_analytics: G-XXXXXXXXXX
-
-favicon_ico: "/assets/icons/favicon.ico"
