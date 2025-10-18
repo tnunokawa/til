@@ -7,7 +7,8 @@ url: "https://tnunokawa.github.io/til/"   # サイトのURL
 #baseurl: ""                     # サブパスがある場合のみ設定（例：/blog）
 
 # テーマ設定
-theme: minima  # GitHub Pagesで使える標準テーマ
+#theme: minima  # GitHub Pagesで使える標準テーマ
+remote_theme: jekyll/minima@latest
 
 # ナビゲーションメニューをつけたい場合（テーマによって対応）
 # header_pages:
