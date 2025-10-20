@@ -8,7 +8,8 @@ url: "https://tnunokawa.github.io/til/"   # サイトのURL
 
 # テーマ設定
 #theme: minima  # GitHub Pagesで使える標準テーマ
-remote_theme: jekyll/minima@latest
+#remote_theme: jekyll/minima@latest
+theme: jekyll-theme-primer
 
 # ナビゲーションメニューをつけたい場合（テーマによって対応）
 # header_pages:
