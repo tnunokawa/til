@@ -103,15 +103,44 @@ public class Sub extends Super {
 ---
 
 ## No.7
-**選択肢:** B?  
-**結果:**   
+**選択肢:** B  
+**結果:** 〇  
 **ポイント:**
+コンストラクタチェーンとは、サブクラスのコンストラクタが呼び出されたときに、スーパークラスのコンストラクタも順番に呼び出される仕組みのこと。サブクラスのコンストラクタが実行される前にスーパークラスのコンストラクタが実行されるため、スーパークラスのフィールドが初期化されてからサブクラスのフィールドが初期化される。これにより、サブクラスはスーパークラスの機能を正しく利用できるようになる。
+スーパークラスのコンストラクタが引数なしの場合は自動的に呼び出される。しかし、サブクラスのコンストラクタ内でthis();など明示的に呼び出されていた場合、そのコンストラクタにsuper();が挿入されるとコンパイルエラーになる(コンストラクタのthisやsuperはコンストラクタの先頭にしか書けない)ため、コンパイラはthis();で呼び出した先のコンストラクタにsuper();を挿入する。
+
+```java
+public class Super {
+    public Super() {
+        System.out.println("Superのコンストラクタ");
+    }
+}
+public class Sub extends Super {
+    public Sub() {
+        this(0); // 引数ありコンストラクタを呼び出す
+    }
+    public Sub(int value) {
+        super(); // ここでsuper()が挿入される(明示的に書かなくてもコンパイラが挿入する)
+        System.out.println("Subの引数ありコンストラクタ: " + value);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Sub();
+    }
+}
+```
+↓
+```
+Superのコンストラクタ
+Subの引数ありコンストラクタ: 0
+```
 
 ---
 
 ## No.8
 **選択肢:** E   
-**結果:**   
+**結果:** 〇  
 **ポイント:**  
 
 ---
@@ -131,9 +160,24 @@ public class Sub extends Super {
 ---
 
 ## No.11
-**選択肢:** C?  
-**結果:**   
+**選択肢:** C×A  
+**結果:** ×  
 **ポイント:**
+サブクラスでオーバーライドしたメソッドの例外はなくても良い。ただしもし例外を出す場合はスーパークラスのメソッドの例外と同じ型化、そのサブタイプである必要がある。
+※オーバーライド:スーパークラスで定義されたメソッドをサブクラスで再定義すること。
+```java
+public class Super {
+    public void method() throws IOException {
+        // 何らかの処理
+    }
+}
+public class Sub extends Super {
+    @Override
+    public void method() throws FileNotFoundException { // OK: FileNotFoundExceptionはIOExceptionのサブタイプ
+        // 何らかの処理
+    }
+}
+```
 
 ---
 
